@@ -1,26 +1,16 @@
 #include<stdio.h>
 #include<math.h>
 float Pi=3.142857;
+//function to convert from degree to rad 
 float deg2rad (float deg)
 {
 return (deg*PI/180);
 }
-
+//distance function 
 int main()
 {
     float lng1,lng2,lat1,lat2,distance;
-    printf("Enter the longitude1 : ");
-    scanf("%f", &lng1);
-
-    printf("Enter the latitude1 : ");
-    scanf("%f", &lat1);
-    
-     printf("Enter the longitude2 : ");
-    scanf("%f", &lng2);
-
-    printf("Enter the latitude2 : ");
-    scanf("%f", &lat2);
-    
+   
     float distanceCalc(float lng1, float lat1,float lng2, float lat2)
 {
     
