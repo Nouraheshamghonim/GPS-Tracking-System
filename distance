@@ -1,1 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()  
+{  
+float Long1=31.642468710834535;
+float Long2=31.654007239670428;
+float Lat1=30.1333862290814;
+float Lat2=30.13905461473698;
+float distance1;
+  distance1 = 3963*acos(sin(Lat1)*sin(Lat2)+cos(Lat1)*cos(Lat2)*cos(Long2-Long1));  
+  
+    printf("Distance between (%f, %f) and (%f, %f) is %f\n", Long1, Lat1, Long2, Lat2, distance1);  
+  
+     return 0;  
+}  
+
 
