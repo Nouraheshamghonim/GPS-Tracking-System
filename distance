@@ -1,23 +1,43 @@
 #include<stdio.h>
 #include<math.h>
-
-int main()  
-{  
-float Long1=31.642468710834535;
-float Long2=31.654007239670428;
-float Lat1=30.1333862290814;
-float Lat2=30.13905461473698;
-float distance1;
 float Pi=3.142857;
-Long1=Long1*Pi/180;
-Long2=Long2*Pi/180;
-Lat1=Lat1*Pi/180;
-Lat2=Lat2*Pi/180;
-  distance1 = 6378.137*acos(sin(Lat1)*sin(Lat2)+cos(Lat1)*cos(Lat2)*cos(Long2-Long1));  
-  distance1 = distance1*1000;
-    printf("Distance between (%f, %f) and (%f, %f) is %f\n", Long1, Lat1, Long2, Lat2, distance1);  
-  
-     return 0;  
-}  
+float deg2rad (float deg)
+{
+return (deg*PI/180);
+}
+
+int main()
+{
+    float lng1,lng2,lat1,lat2,distance;
+    printf("Enter the longitude1 : ");
+    scanf("%f", &lng1);
+
+    printf("Enter the latitude1 : ");
+    scanf("%f", &lat1);
+    
+     printf("Enter the longitude2 : ");
+    scanf("%f", &lng2);
+
+    printf("Enter the latitude2 : ");
+    scanf("%f", &lat2);
+    
+    float distanceCalc(float lng1, float lat1,float lng2, float lat2)
+{
+    
+   float Longitude1= deg2rad(lng1);
+   float Longitude2= deg2rad(lng2);
+   float Latitude1= deg2rad(lat1);
+   float Latitude2= deg2rad(lat2);
+
+   float distance =  6378.137 *acos(sin(Latitude1)*sin(Latitude2)+cos(Latitude1)*cos(Latitude2)*cos(Longitude2-Longitude1)); 
+    return distance;
+}
+
+    printf("The total distance is : %f", distance);
+    return 0;
+
+   
+}
+
 
 
