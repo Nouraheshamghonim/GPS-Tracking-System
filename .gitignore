@@ -1,46 +1,63 @@
+int main()  
+{  
+float Long1=;
+float Long2=;
+float Long3=;
+float Long4=;
+float Long5=;
+float Lat1=;
+float Lat2=;
+float Lat3=;
+float Lat4=;
+float Lat5=;
+float distance1;
+float distance2;
+float distance3;
+float distance4;
+float TotalDistance ;  
 
-*.elf
+Long1=Long1*Pi/180;
+Long2=Long2*Pi/180;
+Long3=Long3*Pi/180;
+Long4=Long4*Pi/180;
+Long5=Long5*Pi/180;
 
-# Linker output
-*.ilk
-*.map
-*.exp
+Lat1=Lat1*Pi/180;
+Lat2=Lat2*Pi/180;
+Lat3=Lat3*Pi/180;
+Lat4=Lat4*Pi/180;
+Lat5=Lat5*Pi/180;
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+  
+    distance1 = sqrt( (Long2 - Long1)*(Long2 - Long1) + (Lat2 - Lat1)*(Lat2 - Lat1) );  
+  
+    printf("Distance between (%f, %f) and (%f, %f) is %f\n", Long1, Lat1, Long2, Lat2, distance1);  
+  
+  
+   
+  
+   distance2 = sqrt( (Long3 - Long2)*(Long3 - Long2) + (Lat3 - Lat2)*(Lat3 - Lat2) );  
+  
+    printf("Distance between (%f, %f) and (%f, %f) is %f\n", Long2, Lat2, Long3, Lat3, distance2);  
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+  
+ distance3 = sqrt( (Long4 - Long3)*(Long4 - Long3) + (Lat4 - Lat3)*(Lat4 - Lat3) );  
+  
+    printf("Distance between (%f, %f) and (%f, %f) is %f\n", Long3, Lat3, Long4, Lat4, distance3);
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+
+ distance4 = sqrt( (Long4 - Long3)*(Long4 - Long3) + (Lat4 - Lat3)*(Lat4 - Lat3) );  
+  
+    printf("Distance between (%f, %f) and (%f, %f) is %f\n", Long3, Lat3, Long4, Lat4, distance3);
+  
+  
+float TotalDistance=distance1+distance2+distance3+distance4;
+
+ 
+  
+    return 0;  
+}  
+
