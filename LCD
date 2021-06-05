@@ -1,6 +1,6 @@
 #include "stdint.h"
 #include "stdio.h"
-#include "tm4c123gh6pm.h"
+#include "inc\tm4c123gh6pm.h"
 
 void delay(float x)
 {
