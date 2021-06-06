@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-float Pi=3.142857;
+#define PI 3.142857
 //function to convert from degree to rad 
 float deg2rad (float deg)
 {
